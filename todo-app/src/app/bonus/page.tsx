@@ -1,4 +1,3 @@
-import type { InferGetStaticPropsType, GetStaticProps } from "next";
 import { useMemo } from "react";
 
 type column = {
