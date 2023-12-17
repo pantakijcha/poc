@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import styled from "styled-components";
 
@@ -15,12 +15,12 @@ const StyledCard = styled(Card)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-`
+`;
 
 export default function LoginPage() {
   const router = useRouter();
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState();
 
   const onSubmit = (data: Inputs) => {
@@ -28,11 +28,15 @@ export default function LoginPage() {
     getAccessToken(data)
       .then((res) => {
         sessionStorage.setItem("token", res.token);
-        router.push(`/auth/todo-list?token=${res.token}`);
+        router.push("/auth/todo-list");
       })
       .catch(setError)
       .finally(() => setIsLoading(false));
   };
+
+  useEffect(() => {
+    sessionStorage.removeItem("token");
+  }, [])
 
   return (
     <>

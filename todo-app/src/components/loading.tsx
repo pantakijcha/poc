@@ -17,7 +17,7 @@ const LoadingBackDrop = styled.div`
   > div {
     padding: 16px;
     background-color: white;
-    border: 1px solid rgba(237, 237, 237, 1);
+    border: 1px solid var(--bluegray-200);
     border-radius: 16px;
   }
 `;
