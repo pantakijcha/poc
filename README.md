@@ -5,6 +5,7 @@ This is a todo application for test skill with Neversitup Company
 First, run the development server:
 
 ```bash
+cd rodo-app
 npm run dev
 # or
 yarn dev
