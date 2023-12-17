@@ -6,14 +6,7 @@ First, run the development server:
 
 ```bash
 cd rodo-app
-
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [Sign up link](https://nevers-todo-register.firebaseapp.com/) with your browser and create your account.
